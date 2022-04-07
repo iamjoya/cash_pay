@@ -37,6 +37,15 @@ npm install rimraf
 npm install --save-dev @faker-js/faker
 ``` 
 
+## Pre-requisite:
+- On the feature > env > config.json add the following parameter with the correct test data value:
+``` 
+{    
+    "api_key": "",
+    "business_id": "", 
+    "no_write_access_api_key": ""
+}
+``` 
 
 ## To Create Reports folder
 ```
