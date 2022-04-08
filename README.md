@@ -39,7 +39,7 @@ npm install --save-dev @faker-js/faker
 ``` 
 
 ## Pre-requisite:
-- On the feature > env > config.json add the following parameter with the correct test data value from you xendit dashboard account:
+- On the feature > env > config.json add the following parameter with the correct test data value from your xendit dashboard account:
 ``` 
 {    
     "api_key": "",
