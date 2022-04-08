@@ -15,7 +15,7 @@ npm install --save-dev @cucumber/cucumber
 ``` 
 - [Super Agent] : For API test
 ``` 
- npm install --save-dev selenium-webdriver
+ npm install superagent
 ``` 
 - [chai] : Assertions
 ``` 
