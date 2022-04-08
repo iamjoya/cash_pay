@@ -5,9 +5,9 @@ const {assert} = require("chai");
 const {apir} = require("../../utilities/utils");
 const url = require("../env/urls.json")
 const env = require("../env/config.json")
-const createPaymentReq = require("../page_objects/create_payment_request.json")
-const failureCodes = require("../page_objects/failure_codes.json")
-const channelConfig = require("../page_objects/channel_config.json")
+const createPaymentReq = require("../fixture/create_payment_request.json")
+const failureCodes = require("../fixture/failure_codes.json")
+const channelConfig = require("../fixture/channel_config.json")
 const {faker} = require('@faker-js/faker');
 
 
