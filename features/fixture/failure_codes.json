@@ -1,0 +1,122 @@
+{
+    "invalid_channel": {
+        "error_code": "API_VALIDATION_ERROR",
+        "message": "illegal arg: channel code must be in uppercase"
+    },
+    "duplicate_payment_code": {
+        "error_code": "DUPLICATE_ERROR",
+        "message": "ReferenceID already used: '{{reference_id}}'"
+    },
+    "invalid_json":{
+        "error_code": "INVALID_JSON_FORMAT",
+        "message": "The body request is not in a valid JSON format"
+    },
+
+    "invalid_api_key": {
+        "error_code": "INVALID_API_KEY",
+        "message": "The API key provided is invalid. Please make sure to use the secret/public API key that you can obtain from the Xendit Dashboard. See https://developers.xendit.co/api-reference/#authentication for more details"
+    },
+
+    "amount_below_minimum": {
+        "error_code": "API_VALIDATION_ERROR",
+        "message": "illegal arg: amount must be at least '{{minimum_amount}}', but got '{{invalidAmount}}'"
+    },
+
+    "amount_above_maximum": {
+        "error_code": "API_VALIDATION_ERROR",
+        "message": "illegal arg: amount must be at most '{{maximum_amount}}', but got '{{invalidAmount}}'"
+    },
+
+    "amount_not_within_the_range":{
+        "error_code": "API_VALIDATION_ERROR",
+        "message": "illegal arg: amount must be within '{{minimum_amount}} to {{maximum_amount}}', but got '{{invalidAmount}}'"
+    },
+
+    "missing_reference_id": {
+        "error_code": "API_VALIDATION_ERROR",
+        "message": "illegal arg: merchant reference ID is required"
+    },
+
+    "missing_channel_code": {
+        "error_code": "API_VALIDATION_ERROR",
+        "message": "illegal arg: missing channel code"
+    },
+
+    "missing_customer_name": {
+        "error_code": "API_VALIDATION_ERROR",
+        "message": "illegal arg: customer Name must not be empty"
+    },
+
+    "unknown_currency": {
+            "error_code": "API_VALIDATION_ERROR",
+            "message": "illegal arg: unknown currency '{{illegalArg}}'"
+    },
+
+    "unknown_country": {
+            "error_code": "API_VALIDATION_ERROR",
+            "message": "illegal arg: unknown country '{{illegalArg}}'"
+    },
+
+    "change_amount_not_supported":{
+        "error_code": "API_VALIDATION_ERROR",
+        "message": "illegal arg: changing amount is not supported by 7Eleven"
+    },
+
+    "change_7eleven_payer_not_supported": {
+        "error_code": "API_VALIDATION_ERROR",
+        "message": "illegal arg: changing payer is not supported by 7Eleven"
+    },
+
+    "change_7eleven_expiry_not_supported": {
+        "error_code": "API_VALIDATION_ERROR",
+        "message": "illegal arg: changing expiry is not supported by 7Eleven"
+    },
+
+    "expected_amount_not_match":{
+        "error_code": "API_VALIDATION_ERROR",
+        "message": "wrong amount: expecting amount to be ₱200.00, but got ₱100.00"
+    },
+
+    "payment_code_not_found":{
+        "error_code": "DATA_NOT_FOUND_ERROR",
+        "message": "slip not found for code '{{illegalArg}}'"
+    },
+
+    "payment_code_already_used": {
+        "error_code": "INACTIVE_PAYMENT_CODE_ERROR",
+        "message": "already used: code is single use"
+    },
+
+    "customer_name_limit_exceeded": {
+        "error_code": "API_VALIDATION_ERROR",
+        "message": "illegal arg: this channel can only display at most {{maximum_char_limit}}-character long customer name, but got {{invalidChar}}"
+    },
+
+    "description_limit_exceeded": {
+        "error_code": "API_VALIDATION_ERROR",
+        "message": "illegal arg: this channel can only display at most {{minimum_description_char_limit}}-character long description, but got {{invalidChar}}"
+    },
+
+    "bank_not_supported": {
+        "error_code": "BANK_NOT_SUPPORTED_ERROR",
+        "message": "That bank code is not currently supported"
+    },
+
+    "access_permission_denied": {
+        "error_code": "REQUEST_FORBIDDEN_ERROR",
+        "message": "The API key is forbidden to perform this request"
+    },
+    "diacritics_not_supported": {
+        "error_code": "API_VALIDATION_ERROR",
+        "message": "illegal arg: customer Name contains disallowed characters"
+    },
+    "back_dated_expiry_is_invalid":{
+        "error_code": "EXPIRATION_DATE_INVALID_ERROR",
+        "message": "invalid expiry: expiry date must be a future date"
+    },
+    "unsupported_channel": {
+            "error_code": "CHANNEL_CODE_NOT_SUPPORTED",
+            "message": "unsupported channel: channel '{{market_code}}::{{invalidChannel}}'"
+    }
+
+}
