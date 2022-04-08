@@ -1,4 +1,4 @@
-# cash_pay
+# cashpay-trial-qa-automation
  Cashpay work trial
  
  ## Setup instructions
