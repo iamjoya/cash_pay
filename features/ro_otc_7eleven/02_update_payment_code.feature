@@ -1,6 +1,6 @@
 Feature: 7ELEVEN - Update Payment Code by ID
 
-    @create_payment_code @positive_scenario
+    @create_payment_code
     Scenario: Be able to create payment code
         Given I created a "POST" request for "Xendit PH" request for endpoint "/payment_codes"
         When I create a "fixed" payment request for channel "7ELEVEN"

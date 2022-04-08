@@ -13,7 +13,7 @@ Feature: 7ELEVEN - GET Payment Code ID
             | amount |
             | 120    |
 
-
+    @negative_scenario
     Scenario Outline: 404 status code - Validation should prompt when payment code not exist or not found
         Given I created a "GET" "Xendit PH" request for endpoint "/payment_codes" that includes payment id
         And I have updated the payment id to this "/payment_codes/<payment_code_id>"
@@ -25,7 +25,7 @@ Feature: 7ELEVEN - GET Payment Code ID
             | TESTREPCA8NJCHINVALID                      |
             | pcode-bfdc6037-574b-41e8-8a21-948fa5e7b0c4 |
 
-
+    @negative_scenario
     Scenario: Be able to get the response body from the payment code creation
         Given I created a "GET" "Xendit PH" request for endpoint "/payment_codes" that includes payment id
         When I send the request

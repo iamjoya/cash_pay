@@ -50,7 +50,7 @@ Feature: Cebunana - Update Payment Code by ID
             | Testing     |
 
     @negative_scenario
-     Scenario: API key access permission is set as read only
+    Scenario: API key access permission is set as read only
         Given I created a "PATCH" "Xendit PH" request for endpoint "/payment_codes" that includes payment id
         And the "PH" api key is set as "no_write_access_api_key"
         When I send the request

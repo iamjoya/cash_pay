@@ -57,7 +57,7 @@ Feature: 7ELEVEN - Create Payment Code
         And I send the request
         Then the response status should be "400"
         And the response.Body for the "unknown_currency" containing "blank" should be returned
-    
+
     @negative_scenario
     Scenario: Validation should prompt when i leave Reference ID field empty
         When I create a "fixed" payment request for channel "7ELEVEN"
@@ -76,7 +76,7 @@ Feature: 7ELEVEN - Create Payment Code
 
     @negative_scenario
     Scenario Outline: Validation should prompt when Customer Character Limit exceeded the maximum limit
-       When I create a "fixed" payment request for channel "7ELEVEN"
+        When I create a "fixed" payment request for channel "7ELEVEN"
         And the requestBody.customer_name is "<customer_name>"
         And I send the request
         Then the response status should be "400"
@@ -102,7 +102,7 @@ Feature: 7ELEVEN - Create Payment Code
             | 49     |
             | -9     |
 
-
+    @negative_scenario
     Scenario Outline: Validation should prompt when amount is above the maximum limit of Php 10,000
         When I create a "fixed" payment request for channel "7ELEVEN"
         And the requestBody.amount is "<amount>"
@@ -116,7 +116,7 @@ Feature: 7ELEVEN - Create Payment Code
             | 10001  |
             | 10999  |
 
-
+    @negative_scenario
     Scenario: DUPLICATE ERROR should prompt when payment code already exist
         When I create a "fixed" payment request for channel "7ELEVEN"
         And I send the request
@@ -127,7 +127,7 @@ Feature: 7ELEVEN - Create Payment Code
         Then the response.Body for the "duplicate_payment_code" with the "reference_id" value is returned
 
 
-
+    @positive_scenario
     Scenario: Be able to create payment code
         When I create a "fixed" payment request for channel "7ELEVEN"
         And I send the request

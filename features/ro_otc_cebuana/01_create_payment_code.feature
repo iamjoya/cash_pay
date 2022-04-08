@@ -33,7 +33,7 @@ Feature: Cebunana - Create Payment Code
             | 2022-04-01T23:03:08.97725Z |
 
 
-    @negative_scenario @WIP
+    @negative_scenario 
     Scenario Outline: 400 status - Validation should be apply when channel code is not supported
         When I create a "fixed" payment request for channel "CEBUANA"
         And the requestBody.channel_code is "<channel_code>"

@@ -80,7 +80,7 @@ When(/^I send the request$/, async function () {
     if(this.request.method !== "GET"){
         this.request.requestBody = this.reqBody;
     }
-    console.log(this.request)
+
     this.response = await apir(this.request);
     this.resBody = this.response.body;
 });
@@ -224,7 +224,6 @@ Then(/^the response.Body for the "(.*)" with amount of "(.*)" is returned$/, asy
     let invalidReg = new RegExp("{{invalidAmount}}")
     let errorMsg = expectedResponse.message
     if (errorMsg.match(amountReg)) {
-        console.log(errorMsg.match(amountReg)[1])
         errorMsg = errorMsg.replace(errorMsg.match(amountReg)[0], channelConfig[this.reqBody.channel_code][errorMsg.match(amountReg)[1] + '_amount'])
         errorMsg = errorMsg.replace(errorMsg.match(invalidReg)[0], amountWithCurrency)
         Object.assign(expectedResponse, {
@@ -256,7 +255,6 @@ Then(/^the response.Body for the "(.*)" with the count of  "(.*)" is returned$/,
     let invalidReg = new RegExp("{{invalidChar}}")
     let errorMsg = expectedResponse.message
     if (errorMsg.match(amountReg)) {
-        console.log(errorMsg.match(amountReg)[1])
         errorMsg = errorMsg.replace(errorMsg.match(amountReg)[0], channelConfig[this.reqBody.channel_code][errorMsg.match(amountReg)[1] + '_limit'])
         errorMsg = errorMsg.replace(errorMsg.match(invalidReg)[0], amountValue)
         Object.assign(expectedResponse, {
@@ -278,7 +276,6 @@ Then(/^the response.Body for the "(.*)" with the "(.*)" value is returned$/, asy
     let keyReg = new RegExp("{{(.*)}}")
     let errorMsg = expectedResponse.message
     if (errorMsg.match(keyReg)) {
-        console.log(errorMsg.match(keyReg)[1])
         errorMsg = errorMsg.replace(errorMsg.match(keyReg)[0], this.reqBody[errorMsg.match(keyReg)[1]])
         Object.assign(expectedResponse, {
             "message": errorMsg
@@ -342,7 +339,6 @@ Then(/^the response.Body for the "(.*)" with a channel of "(.*)" is returned$/, 
     let invalidReg = new RegExp("{{invalidChannel}}")
     let errorMsg = expectedResponse.message
     if (errorMsg.match(marketReg)) {
-        console.log(errorMsg.match(marketReg)[1])
         errorMsg = errorMsg.replace(errorMsg.match(marketReg)[0], this.reqBody[errorMsg.match(marketReg)[1]])
         errorMsg = errorMsg.replace(errorMsg.match(invalidReg)[0], channelValue)
         Object.assign(expectedResponse, {

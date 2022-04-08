@@ -5,5 +5,5 @@ function setupEnvironment({ attach, parameters }) {
     this.parameters = parameters;
 }
 
-setDefaultTimeout(70000);
+setDefaultTimeout(50000);
 setWorldConstructor(setupEnvironment);
