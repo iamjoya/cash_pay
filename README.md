@@ -2,11 +2,12 @@
  Cashpay work trial
  
  ## Setup instructions
-1. Open terminal and go to the package folder then run:
+1. Clone or Download the project file 
+2. Open terminal and go to the package folder then run:
 ```
 npm install
 ```
-2. Run the ffg commands (Dependencies):
+3. Run the ffg commands (Dependencies):
 
 - [cucumber-js] : Execute BDD test
 ``` 
