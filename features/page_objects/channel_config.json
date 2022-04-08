@@ -1,0 +1,14 @@
+{
+    "7ELEVEN": {
+        "minimum_amount": "₱50.00",
+        "maximum_amount": "₱10,000.00",
+        "maximum_char_limit": "250"
+
+    },
+    "CEBUANA": {
+        "minimum_amount": "₱1.00",
+        "minimum_description_char_limit": "1",
+        "maximum_amount": "₱30,000.00",
+        "maximum_char_limit": "250"
+    }
+}

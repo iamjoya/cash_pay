@@ -1,0 +1,6 @@
+{
+    "urls": {
+        "xendit": "https://api.xendit.co",
+        "company_call_back": "https://yourcompany.com/payment_code_paid_callback_url"
+    }
+}

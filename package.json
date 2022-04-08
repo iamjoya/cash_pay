@@ -1,0 +1,36 @@
+{
+  "name": "cash_pay",
+  "version": "1.0.0",
+  "description": "Cash Pay Work Trial",
+  "main": "index.js",
+  "scripts": {
+    "cucumber": "./node_modules/.bin/cucumber-js",
+    "dryRun": "npm run cucumber -- --dry-run",
+    "initialize_report": "mkdir reports",
+    "test:cebuana": "rimraf reports/* && cucumber-js -- features/ro_otc_cebuana/* ; node ./index.js",
+    "test:7eleven": "rimraf reports/* && cucumber-js -- features/ro_otc_7eleven/* ; node ./index.js",
+    "test:all": "rimraf reports/* && cucumber-js -- features/ro_otc_7eleven/* , features/ro_otc_cebuana/* ; node ./index.js",
+    "test": "npm run cucumber -- features/ro_otc_7eleven/04_simulate_payment_code_payment.feature"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamjoya/cash_pay.git"
+  },
+  "author": "Joy Aguilar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iamjoya/cash_pay/issues"
+  },
+  "homepage": "https://github.com/iamjoya/cash_pay#readme",
+  "dependencies": {
+    "@faker-js/faker": "^6.1.2",
+    "chai": "^4.3.6",
+    "lodash": "^4.17.21",
+    "multiple-cucumber-html-reporter": "^1.19.0",
+    "rimraf": "^3.0.2",
+    "superagent": "^7.1.2"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^7.3.2"
+  }
+}
